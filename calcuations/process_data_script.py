@@ -19,8 +19,8 @@ def load_and_process_data(filename):
     
     # Filter and rename columns
     relevant_columns = ['Frame', 'Time(Seconds)', 
-                        'An_LHeel Position X', 'An_LHeel Position Y', 'An_LHeel Position Z',
-                        'An_RHeel Position X', 'An_RHeel Position Y', 'An_RHeel Position Z']
+                        f'{patient_name}_LHeel Position X', f'{patient_name}_LHeel Position Y', f'{patient_name}_LHeel Position Z',
+                        f'{patient_name}_RHeel Position X', f'{patient_name}_RHeel Position Y', f'{patient_name}_RHeel Position Z']
     heel_data_filtered = correctly_reshaped_data[relevant_columns]
     heel_data_filtered.columns = ['Frame', 'Time(Seconds)', 
                                   'Left Heel X', 'Left Heel Y', 'Left Heel Z',
@@ -51,5 +51,7 @@ def visualize_step_length(data):
     plt.show()
 
 # Usage:
-# data = load_and_process_data("path_to_your_file.csv")
-# visualize_step_length(data)
+patient_name = "" # Update this with the name of the patient
+
+data = load_and_process_data("path_to_your_file.csv")
+visualize_step_length(data)

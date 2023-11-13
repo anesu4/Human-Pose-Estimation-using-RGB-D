@@ -110,7 +110,7 @@ average_swing_time_bing, average_stance_time_bing, swing_times_bing, stance_time
 average_swing_time_bing, average_stance_time_bing, len(swing_times_bing), len(stance_times_bing)
 
 # 4. Save the data to a CSV file
-position_data_optitrack.to_csv(f'{patient_patient_name_optitrackname}_optitrack_position_data.csv', index=False)
+position_data_optitrack.to_csv(f'{patient_name_optitrackname}_optitrack_position_data.csv', index=False)
 
 # # Visualize the step length over frames
 # plt.figure(figsize=(12, 6))
